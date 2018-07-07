@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Normalize.css for better cross-browser consistency -->
-    <link rel="stylesheet" href="//normalize-css.googlecode.com/svn/trunk/normalize.css">
+
     <!-- Main CSS file -->
     <link rel="stylesheet" href="css/styles.css">
     <title>Restaurant Info</title>
@@ -16,11 +15,15 @@
     <header>
         <!-- Beginning nav -->
         <nav>
-            <h1><a href="/">Restaurant Reviews</a></h1>
+            <h1>
+                <a href="/">Restaurant Reviews</a>
+            </h1>
         </nav>
         <!-- Beginning breadcrumb -->
         <ul id="breadcrumb">
-            <li><a href="/">Home</a></li>
+            <li>
+                <a href="/">Home</a>
+            </li>
         </ul>
         <!-- End breadcrumb -->
         <!-- End nav -->
@@ -37,10 +40,16 @@
         <!-- Beginning restaurant -->
         <section id="restaurant-container">
             <h1 id="restaurant-name"></h1>
-            <img id="restaurant-img">
-            <p id="restaurant-cuisine"></p>
-            <p id="restaurant-address"></p>
-            <table id="restaurant-hours"></table>
+            <div class="restaurant-container-split-view">
+                <div>
+                    <img id="restaurant-img">
+                </div>
+                <div>
+                    <p id="restaurant-cuisine"></p>
+                    <p id="restaurant-address"></p>
+                    <table id="restaurant-hours"></table>
+                </div>
+            </div>
         </section>
         <!-- end restaurant -->
         <!-- Beginning reviews -->
@@ -53,7 +62,10 @@
 
     <!-- Beginning footer -->
     <footer id="footer">
-        Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+        Copyright (c) 2017
+        <a href="/">
+            <strong>Restaurant Reviews</strong>
+        </a> All Rights Reserved.
     </footer>
     <!-- End footer -->
 
