@@ -1,28 +1,22 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+# restaurant-review-app
 
-## Project Overview: Stage 1
+This is a project within the Udacity Front-End Nanodegree where the task was to convert a static website into a mobile-ready web application. Areas of focus are mobile responsiveness for different screen sizes, standard accessibility features for screen reader use and offline functionality. 
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+### What is the app about?
 
-### Specification
+The website serves as a guide for restaurants in New York. It is possible to filter for neighboorhoods and cuisines. The restaurant view shows more details such as opening hours and also customer reviews. 
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+### How to access the app?
 
-### What do I do from here?
+- Download or clone the repo. 
+    1. Start up a simple HTTP server via the terminal (f.e. using Python)
+    python 2.x `python -m SimpleHTTPServer 8000` 
+    python 3.x `python3 -m http.server 8000`
+    2. With your local server up and running visit `http://localhost:8000`
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+- Check out the site online (link coming soon)
+    
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
-
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and make start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
-
-### Note about ES6
-
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
 
 
 
