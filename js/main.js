@@ -188,6 +188,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     google.maps.event.addListener(marker, 'click', () => {
       window.location.href = marker.url;
     });
+})
 }
 
 //registering a service worker
@@ -204,4 +205,4 @@ registerServiceWorker = () => {
             });
         });
     };
-}
+  }
