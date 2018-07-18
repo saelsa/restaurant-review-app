@@ -1,6 +1,21 @@
 let restaurant;
 var map;
 
+//registering a service worker
+//https://developers.google.com/web/fundamentals/primers/service-workers/
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+      navigator.serviceWorker.register('sw.js').then(function (registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function (err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+      });
+  });
+};
+
 /**
  * Initialize Google map, called from HTML.
  */
@@ -16,7 +31,6 @@ window.initMap = () => {
       });
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
-      registerServiceWorker();
     }
   });
 }
@@ -166,18 +180,4 @@ getParameterByName = (name, url) => {
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-//registering a service worker
-//https://developers.google.com/web/fundamentals/primers/service-workers/
-registerServiceWorker = () => {
-  if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-          navigator.serviceWorker.register('sw.js').then(function (registration) {
-              // Registration was successful
-              console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }, function (err) {
-              // registration failed :(
-              console.log('ServiceWorker registration failed: ', err);
-          });
-      });
-  };
-}
+

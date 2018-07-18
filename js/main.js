@@ -4,6 +4,21 @@ let restaurants,
 var map
 var markers = []
 
+//registering a service worker
+//https://developers.google.com/web/fundamentals/primers/service-workers/
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').then(function (registration) {
+            // Registration was successful
+            console.log('[ServiceWorker] Registration successful with scope: ', registration.scope);
+        }, function (err) {
+            // registration failed :(
+            console.log('[ServiceWorker] Registration failed: ', err);
+        });
+    });
+};
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
@@ -81,9 +96,6 @@ window.initMap = () => {
         scrollwheel: false
     });
     updateRestaurants();
-
-    registerServiceWorker();
-
 
 }
 
@@ -191,18 +203,5 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 })
 }
 
-//registering a service worker
-//https://developers.google.com/web/fundamentals/primers/service-workers/
-registerServiceWorker = () => {
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-            navigator.serviceWorker.register('sw.js').then(function (registration) {
-                // Registration was successful
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function (err) {
-                // registration failed :(
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        });
-    };
-  }
+
+  
